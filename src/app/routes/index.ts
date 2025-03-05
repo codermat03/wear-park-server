@@ -1,16 +1,16 @@
 // routes / index.ts
 import { Router } from "express";
-import { CategoryRoutes } from "../modules/Product/category.route";
 import { AuthRoutes } from "../modules/Auth/auth.route";
+import { ProductRoutes } from "../modules/Product/product.route";
 
 const router = Router();
 const moduleRoutes = [
     {
-        path: '/api',
-        route: CategoryRoutes
+        path: '/',
+        route: ProductRoutes
     },
     {
-        path: '/api/auth',
+        path: '/auth',
         route: AuthRoutes
     },
 ]

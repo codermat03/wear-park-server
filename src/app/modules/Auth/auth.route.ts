@@ -7,7 +7,7 @@ import checkJwt from '../../middlewares/checkJwt';
 
 const router = express.Router();
 
-router.post('/register', validateRequest(AuthValidations.UserRegisterSchema), AuthController.registerUser);
+// router.post('/register', validateRequest(AuthValidations.UserRegisterSchema), AuthController.registerUser);
 router.post('/login', validateRequest(AuthValidations.loginValidationSchema), AuthController.loginUser);
 router.post('/change-password', checkJwt, validateRequest(AuthValidations.changePasswordValidationSchema), AuthController.changePassword
 );
