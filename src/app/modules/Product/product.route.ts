@@ -9,6 +9,7 @@ const router = express.Router();
 
 router.post('/products', isAuthenticated, isAdmin, validateRequest(ProductValidations.CreateProductValidationSchema), ProductConstroller.createProducts);
 router.get('/products', ProductConstroller.getAllProducts);
+router.get('/products/:id', ProductConstroller.getProductById);
 router.delete('/products/:id', isAuthenticated, isAdmin, ProductConstroller.deleteProduct);
 router.put('/products/:id', isAuthenticated, isAdmin, validateRequest(ProductValidations.UpdateProductValidationSchema), ProductConstroller.updateProduct);
 
